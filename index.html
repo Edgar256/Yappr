@@ -1,0 +1,100 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+    <title>Yappr App</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light youtube_nav">
+        <div class="container">
+          <a class="navbar-brand" href="#">
+              <img src="./images/youtube_logo.png" alt="Youtube Logo">
+              <span class="text-white">Channel App</span>
+          </a>
+          <div class="text-white login-nav" id="login-nav">
+            <!-- <span class="p-2"> Login</span> -->
+            <ul>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <span id="username">peter</span>
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                      <a class="dropdown-item" id="signout-button">Logout</a>
+                    </div>
+                  </li>
+            </ul>
+          </div>
+        </div>        
+      </nav>
+      <div class="main-wrapper w-100" id="content-loggedout">
+        <div class="container d-md-flex">
+            <div class="col-md-6"></div>
+            <div class="col-md-6 login-wrapper">
+                <div class="p-3">
+                    <!-- <div class="user-image">
+                        <img src="./images/user_profile.png" alt="">
+                    </div> -->
+                    <div class="p-2 text-center">
+                        <h4>Login with Google</h4>
+                    </div>
+                    <div class="d-flex p-2">
+                        <button class="btn btn-google mx-auto" id="authorize-button">Login</button>
+                    </div>
+                    <hr>
+                    <div class="pt-5">
+                        <h6>How This App Works</h6>
+                        This app helps you easily and effeciently analyse details about any youtube channel there is !!!
+                        <ol>
+                            <li>Login in with your gmail account(if you do not have one create one <a href="https://support.google.com/mail/answer/56256?hl=en" target="_blank">here</a> )</li>
+                            <li>Enter Youtube Channel name</li>
+                            <li>Press submit button</li>
+                            <li>Boom!! You have all the details about the Youtube Channel</li>
+                        </ol>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+      </div>
+      <div class="content-loggedin w-100" id="content-loggedin">
+          <div class="container col-md-12 c-form">
+            <div class="col-md-6 pt-5 c-search">
+                <h6>Enter channel name</h6>
+                <form>
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="channel-input">
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary" id="channel-form">
+                            GET CHANNEL DATA
+                        </button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-6 px-0">
+                <div class="col-md-12" id="channel-data"></div>
+            </div>
+          </div>  
+          <div class="container mt-5">
+            <h3 class="text-center">Latest Videos</h3><hr>
+            <div id="video-container" class="videos-container"></div>
+
+          </div>        
+      </div>
+
+
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+    <script src="./app.js"></script>
+    <script async defer src="https://apis.google.com/js/api.js"
+        onload="this.onload=function(){};handleClientLoad()";
+        onreadystatechange="if(this.readyState === 'complete') this.onload()">
+    </script>
+    
+</body>
+</html>

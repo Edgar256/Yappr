@@ -1,0 +1,99 @@
+.container{
+    max-width: 900px;
+}
+.youtube_nav{
+    background-color: black !important;
+    width: 100%;
+    z-index: 2;
+    top: 0;
+    position: sticky;
+}
+.youtube_nav .container{
+    color: #fff !important;
+}
+.youtube_nav .container a img{
+    max-width: 75px;
+    background-color: #fff;
+    padding: 4px;
+    border-radius: 5px;
+}
+.main-wrapper{
+    background-image: url('./images/interaction-1233873_1280.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: -30px 0px;
+    padding: 20px
+}
+.user-image{
+    width: 100%;
+    display: flex;
+}
+.user-image img{
+    max-width: 100px;
+    margin: auto;
+}
+.login-wrapper{
+    min-height: 500px;
+    background-color: #ffffff;
+    margin: 30px 10px 30px 10px;
+}
+.btn-google{
+    background-color: #ea4335;
+    color: #fff;
+}
+.content-loggedin{
+    display: flex;
+}
+.login-nav ul{
+    list-style: none;
+}
+.login-nav ul a{
+    color: #fff;
+}
+#signout-button{
+    color: black;
+}
+.login-nav{
+    display: none;
+}
+.c-list li{
+    list-style: none;
+    border: 1px solid #e5e5e5e5;
+    padding: 10px;
+}
+.c-list li strong{
+    float: right;
+    margin: 0px 10px 0px 0px;
+}
+.videos-container{
+    display: flow-root;
+}
+.videos-container .video{
+    width: 49%;
+    display: inline-block;
+}
+.c-form{
+    display: flex;
+    padding: 0px;
+}
+.c-search{
+    margin: 0px 0px 100px 0px;
+}
+.c-list{
+    margin: 0px 0px 0px -40px;
+}
+@media (max-width: 768px){
+    .videos-container .video {
+        width: 49%;
+        margin: 2x;
+    }
+    .c-form{
+        display: block;
+    }
+}
+@media (max-width: 425px){
+    .videos-container .video {
+        width: 100%;
+        margin: 2px;
+    }
+}
