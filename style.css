@@ -40,6 +40,8 @@
 .btn-google{
     background-color: #ea4335;
     color: #fff;
+    min-width: 200px;
+    border-radius: 20px;
 }
 .content-loggedin{
     display: flex;
